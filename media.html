@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Media | Thunderz Family</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="logo" href="index.html">Thunderz Family</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="roster.html">Roster</a></li>
+    <li><a class="on" href="media.html">Media</a></li>
+    <li><a href="bookings.html">Bookings</a></li>
+    <li><a href="academy.html">Academy</a></li>
+    <li><a href="store.html">Store</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero">
+  <img src="images/2.jpg" alt="Thunderz Family crew in white outfits" style="object-position:50% 4%">
+  <div class="copy">
+    <h1>Media gallery</h1>
+    <p>Films, performances and portraits from the stage, the studio and the street.</p>
+  </div>
+</header>
+
+<section class="section dark">
+  <h2 class="title">Watch the crew</h2>
+  <p style="max-width:60ch;margin-bottom:2rem">Real clips of the family dancing. Press play on any video.</p>
+  <div class="reel">
+    <figure class="clip">
+      <video controls playsinline preload="none" poster="images/v1.jpg"><source src="videos/v1.mp4" type="video/mp4"></video>
+      <figcaption><span>Clip 01</span><span>0:50</span></figcaption>
+    </figure>
+    <figure class="clip">
+      <video controls playsinline preload="none" poster="images/v2.jpg"><source src="videos/v2.mp4" type="video/mp4"></video>
+      <figcaption><span>Clip 02</span><span>0:26</span></figcaption>
+    </figure>
+    <figure class="clip">
+      <video controls playsinline preload="none" poster="images/v3.jpg"><source src="videos/v3.mp4" type="video/mp4"></video>
+      <figcaption><span>Clip 03</span><span>0:36</span></figcaption>
+    </figure>
+    <figure class="clip">
+      <video controls playsinline preload="none" poster="images/v4.jpg"><source src="videos/v4.mp4" type="video/mp4"></video>
+      <figcaption><span>Clip 04</span><span>1:04</span></figcaption>
+    </figure>
+    <figure class="clip">
+      <video controls playsinline preload="none" poster="images/v5.jpg"><source src="videos/v5.mp4" type="video/mp4"></video>
+      <figcaption><span>Clip 05</span><span>1:09</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="title">Photography</h2>
+
+  <div class="album">
+    <h3>Album 1: The arena energy portfolio</h3>
+    <div class="shots">
+      <button class="shot" type="button" data-src="images/4.jpg" data-cap="The Mid-Air Freeze: Leon Dubois frozen in a vertical handstand atop a flaming pyro set at London Arena."><img src="images/4.jpg" alt=""><span><b>The Mid-Air Freeze</b>Leon Dubois frozen in a vertical handstand atop a flaming pyro set at London Arena.</span></button>
+      <button class="shot" type="button" data-src="images/5.jpg" data-cap="Synchronized Shadows: The complete 30-man crew caught in a flawless, identical low-groove silhouette against a wall of white LED light."><img src="images/5.jpg" alt=""><span><b>Synchronized Shadows</b>The complete 30-man crew caught in a flawless, identical low-groove silhouette against a wall of white LED light.</span></button>
+      <button class="shot" type="button" data-src="images/6.jpg" data-cap="The Climax: Sweat droplets captured in mid-air suspension under heavy strobe lights as Marcus Vance finishes his closing Krump solo."><img src="images/6.jpg" alt=""><span><b>The Climax</b>Sweat droplets captured in mid-air suspension under heavy strobe lights as Marcus Vance finishes his closing Krump solo.</span></button>
+    </div>
+  </div>
+
+  <div class="album">
+    <h3>Album 2: High-fashion editorial portraits</h3>
+    <div class="shots two">
+      <button class="shot" type="button" data-src="images/1.jpg" data-cap="Minimalist profile close-ups of the crew wearing structural black urban streetwear, emphasized by harsh loop lighting."><img src="images/1.jpg" alt=""><span><b>Profile close-ups</b>Minimalist profile close-ups of the crew wearing structural black urban streetwear, emphasized by harsh loop lighting.</span></button>
+      <button class="shot" type="button" data-src="images/7.jpg" data-cap="Full-length body motion blur photography capturing the graceful flow of contemporary-urban choreography using slow-shutter techniques."><img src="images/7.jpg" alt=""><span><b>Motion blur</b>Full-length body motion blur photography capturing the graceful flow of contemporary-urban choreography using slow-shutter techniques.</span></button>
+    </div>
+  </div>
+
+  <div class="album">
+    <h3>Album 3: The wanderlust debris (global tour candids)</h3>
+    <div class="shots two">
+      <button class="shot" type="button" data-src="images/3.jpg" data-cap="Candid backstage exhaustion shots in Tokyo backstage dressing rooms."><img src="images/3.jpg" alt=""><span><b>Tokyo, backstage</b>Candid backstage exhaustion shots in Tokyo backstage dressing rooms.</span></button>
+      <button class="shot" type="button" data-src="images/2.jpg" data-cap="Rain-slicked cipher battles on the concrete streets of Berlin during tour downtime."><img src="images/2.jpg" alt=""><span><b>Berlin, the cipher</b>Rain-slicked cipher battles on the concrete streets of Berlin during tour downtime.</span></button>
+    </div>
+  </div>
+  <p class="note">Click any photo to enlarge it.</p>
+</section>
+
+<dialog id="lightbox" aria-label="Photo viewer">
+  <button type="button" id="close" aria-label="Close">×</button>
+  <img id="lbimg" src="" alt="">
+  <p id="lbcap"></p>
+</dialog>
+
+<section class="cta">
+  <h2>Need footage or press images?</h2>
+  <a class="btn" href="contact.html">Contact the press office</a>
+</section>
+
+<footer>© THUNDERZ FAMILY</footer>
+
+<script>
+  // Lightbox: click a photo to enlarge it, click outside or press Esc to close.
+  const box = document.getElementById('lightbox');
+  document.querySelectorAll('.shot').forEach(s => s.addEventListener('click', () => {
+    document.getElementById('lbimg').src = s.dataset.src;
+    document.getElementById('lbcap').textContent = s.dataset.cap;
+    box.showModal();
+  }));
+  document.getElementById('close').addEventListener('click', () => box.close());
+  box.addEventListener('click', e => { if (e.target === box) box.close(); });
+</script>
+
+</body>
+</html>

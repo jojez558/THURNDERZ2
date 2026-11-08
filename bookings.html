@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bookings | Thunderz Family</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="logo" href="index.html">Thunderz Family</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="roster.html">Roster</a></li>
+    <li><a href="media.html">Media</a></li>
+    <li><a class="on" href="bookings.html">Bookings</a></li>
+    <li><a href="academy.html">Academy</a></li>
+    <li><a href="store.html">Store</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero">
+  <img src="images/5.jpg" alt="Dancers in Thunderz Family tees" style="object-position:50% 22%">
+  <div class="copy">
+    <h1>Services &amp; bookings</h1>
+    <p>Choreography, concerts, brand activations and judging panels, built for large productions.</p>
+  </div>
+</header>
+
+<section class="section">
+  <h2 class="title">The service portfolio</h2>
+  <div class="cards">
+    <article class="card">
+      <span class="num">01</span>
+      <h3>Industrial commercial &amp; music video choreography</h3>
+      <p>We provide total creative movement architecture for multi-million dollar commercial productions, world-class musical artists, and high-budget cinema releases. Our services include:</p>
+      <ul class="tick">
+        <li><b>Phase 1:</b> Complete pre-visualization video treatments detailing movement themes and spatial dynamics.</li>
+        <li><b>Phase 2:</b> One-on-one movement coaching and performance psychological prep for lead musical artists and celebrity talent.</li>
+        <li><b>Phase 3:</b> Comprehensive global casting pipelines for supporting background dancer assets via our extensive industry database.</li>
+        <li><b>Phase 4:</b> On-set camera blocking and cinematography design optimized explicitly for high-speed dance capture.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <span class="num">02</span>
+      <h3>Turnkey live concerts &amp; stadium entertainment</h3>
+      <p>We engineer high-impact stage shows built specifically to dominate arena-scale venues, music festivals, and global broadcasting events. We don’t provide background dancers; we provide the entire visual core of the concert.</p>
+      <p class="label">Execution parameters</p>
+      <p>Custom structural set design recommendations, integration with timed pyrotechnics, bespoke digital backdrop video loops, and synchronization with complex automated lighting rigs.</p>
+    </article>
+    <article class="card">
+      <span class="num">03</span>
+      <h3>Luxury brand activations &amp; product launches</h3>
+      <p>Transform corporate messages into unforgettable, physical phenomena. We design high-concept avant-garde performances tailored for premium automotive unveils, luxury fashion week runway events, tech expos, and high-profile global brand rollouts.</p>
+      <p class="label">Strategic goal</p>
+      <p>Creating highly shareable, visually mesmerizing kinetic moments that go viral on digital media and command major press coverage.</p>
+    </article>
+    <article class="card">
+      <span class="num">04</span>
+      <h3>Accredited adjudication &amp; institutional panelists</h3>
+      <p>Our principal directors bring unprecedented global authority and credibility to competition judging panels, creative masterclasses, and educational entertainment conferences worldwide.</p>
+    </article>
+  </div>
+</section>
+
+<div class="strip">
+  <figure><img src="images/1.jpg" alt="Five dancers in white"></figure>
+  <figure><img src="images/3.jpg" alt="Crew in red and white"></figure>
+  <figure><img src="images/6.jpg" alt="Crew posing together"></figure>
+</div>
+
+<section class="section dark">
+  <h2 class="title">Production rider</h2>
+  <p style="margin-bottom:2rem;max-width:60ch">Before submission, please check your production against our standard operational prerequisites.</p>
+  <div class="cards">
+    <article class="card"><p class="label">Minimum staging</p><p class="big">12 × 10 × 4 m</p><p>12 meters width × 10 meters depth × 4 meters clearance height.</p></article>
+    <article class="card"><p class="label">Flooring standard</p><p class="big">Sprung floor</p><p>Professional Harlequin sprung dance floor or specialized smooth wood surfaces. Absolutely no untreated concrete, high-friction tile, or wet surfaces.</p></article>
+    <article class="card"><p class="label">Technical support</p><p class="big">Sound + lighting</p><p>Minimum 1 dedicated professional sound engineer and 1 lighting director available for tech rehearsals.</p></article>
+  </div>
+</section>
+
+<section class="section" id="intake">
+  <h2 class="title">Project intake form</h2>
+  <form class="form" id="intake-form">
+    <label>Legal corporate entity<input name="entity" type="text" placeholder="e.g., Paramount Pictures / Universal Music" required></label>
+    <label>Executive point of contact name<input name="contact" type="text" placeholder="e.g., Sarah Jenkins, Executive Producer" required></label>
+    <label>Verified corporate email address<input name="email" type="email" placeholder="s.jenkins@productionfirm.com" required></label>
+    <label>Specific engagement classification
+      <select name="type" required>
+        <option value="">Choose one</option>
+        <option>Music Video Production</option><option>Stadium Concert Tour</option><option>Luxury Brand Activation</option><option>Cinema Movement Design</option><option>Judicial Adjudication Call</option>
+      </select></label>
+    <label class="full">Operational target date &amp; venue geo-location<input name="venue" type="text" placeholder="e.g., October 24th, 2026 - O2 Arena, London"></label>
+    <label>Scale of roster allocation requested
+      <select name="roster" required>
+        <option value="">Choose one</option>
+        <option>Full Elite Vanguard MegaCrew (30+ Dancers)</option><option>Standard High-Impact Core Performer Unit (12-15 Dancers)</option><option>Specialized Tactical Unit (4-6 Dancers)</option><option>Principal Choreographic Directors Only (Marcus, Elena, or Xavier)</option>
+      </select></label>
+    <label>Budget threshold allocation
+      <select name="budget" required>
+        <option value="">Choose one</option>
+        <option>$10,000 - $25,000 (Local Workshops / Short Sets Only)</option><option>$25,000 - $75,000 (Standard Commercial / Mid-Scale Shows)</option><option>$75,000 - $200,000+ (Full Stadium / Comprehensive Tour Architecture)</option>
+      </select></label>
+    <label class="full">Comprehensive technical project brief<textarea name="brief" placeholder="Outline your creative vision, thematic goals, and physical constraints here..."></textarea></label>
+    <div class="full"><button class="btn" type="submit">Submit project request</button><p class="hint" style="margin-top:.8rem">This opens your email app with the request filled in, addressed to booking@thunderzfamily.com.</p></div>
+  </form>
+</section>
+
+<section class="cta">
+  <h2>Prefer to talk first?</h2>
+  <a class="btn" href="contact.html">Contact the booking team</a>
+</section>
+
+<footer>© THUNDERZ FAMILY</footer>
+
+<script>
+  // Builds an email from the form and opens the visitor's mail app (no server needed).
+  document.getElementById('intake-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const d = new FormData(e.target);
+    const body = [...d.entries()].map(([k, v]) => k.toUpperCase() + ': ' + v).join('\n');
+    location.href = 'mailto:booking@thunderzfamily.com?subject=' + encodeURIComponent('Project request: ' + d.get('entity')) + '&body=' + encodeURIComponent(body);
+  });
+</script>
+
+</body>
+</html>

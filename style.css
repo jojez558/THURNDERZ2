@@ -1,0 +1,124 @@
+/* ==========================================================================
+   THUNDERZ FAMILY  |  1 Variables  2 Base  3 Hero  4 Marquee
+   5 Intro  6 Mosaic gallery  7 Contact  8 Footer
+   ========================================================================== */
+
+/* 1. VARIABLES: change a color here and it updates everywhere */
+:root{
+  --color-navy:   #0b1f3a;   /* dark sections, text */
+  --color-blue:   #1e6fd9;   /* marquee band */
+  --color-sky:    #3ec1ff;   /* accents */
+  --color-red:    #e63946;   /* accents */
+  --color-pink:   #ff4f9a;   /* accents */
+  --color-cream:  #f6f1e7;   /* light sections */
+  --color-white:  #ffffff;
+
+  --font-display: 'Bebas Neue', Impact, sans-serif;
+  --font-body:    'DM Sans', Helvetica, Arial, sans-serif;
+  --gap:          clamp(10px, 1.4vw, 22px);
+  --pad:          clamp(20px, 6vw, 96px);
+}
+
+/* 2. BASE */
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+body{ background:var(--color-cream); color:var(--color-navy); font-family:var(--font-body); line-height:1.6; -webkit-font-smoothing:antialiased; }
+img{ display:block; width:100%; height:100%; object-fit:cover; }
+a{ color:inherit; text-decoration:none; }
+a:focus-visible{ outline:3px solid var(--color-sky); outline-offset:4px; }
+h1,h2{ font-family:var(--font-display); font-weight:400; line-height:.95; text-transform:uppercase; letter-spacing:.02em; }
+.btn{ display:inline-block; padding:.9em 2em; background:var(--color-pink); color:var(--color-white); font-weight:700; letter-spacing:.08em; text-transform:uppercase; font-size:.85rem; border-radius:999px; transition:transform .2s, background .2s; }
+.btn:hover{ transform:translateY(-3px); background:var(--color-red); }
+
+/* 3. HERO */
+.hero{ position:relative; min-height:min(92vh, 900px); display:flex; align-items:flex-end; color:var(--color-white); }
+.hero > img{ position:absolute; inset:0; object-position:50% 0%; }
+.hero::after{ content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(11,31,58,.92) 0%, rgba(11,31,58,.55) 38%, transparent 70%); }
+.hero .copy{ position:relative; z-index:1; padding:var(--pad); max-width:900px; }
+.hero h1{ font-size:clamp(3.2rem, 8.5vw, 8rem); }
+.hero p{ font-size:clamp(1rem, 1.6vw, 1.3rem); max-width:34ch; margin:1rem 0 1.8rem; }
+
+/* 4. MARQUEE: one slow looping band */
+.marquee{ background:var(--color-blue); color:var(--color-white); overflow:hidden; white-space:nowrap; padding:.7rem 0; }
+.marquee div{ display:inline-block; font-family:var(--font-display); font-size:1.6rem; letter-spacing:.12em; animation:slide 28s linear infinite; }
+.marquee span{ margin:0 1.2rem; color:var(--color-sky); }
+@keyframes slide{ to{ transform:translateX(-50%); } }
+@media (prefers-reduced-motion:reduce){ .marquee div{ animation:none; } }
+
+/* 5. INTRO: text + framed portrait */
+.intro{ display:grid; grid-template-columns:1.1fr .9fr; gap:calc(var(--pad) / 1.5); align-items:center; padding:calc(var(--pad) * 1.2) var(--pad); }
+.intro h2{ font-size:clamp(3rem, 7vw, 6rem); margin-bottom:1.2rem; }
+.intro p{ max-width:46ch; font-size:1.05rem; }
+.frame{ position:relative; aspect-ratio:4 / 5; }
+.frame::before{ content:""; position:absolute; inset:0; transform:translate(16px,16px); border:3px solid var(--color-pink); }
+.frame img{ position:relative; }
+.dot{ position:absolute; z-index:2; width:84px; height:84px; right:-20px; top:-24px; border-radius:50%; background:var(--color-sky); display:grid; place-items:center; color:var(--color-navy); font-family:var(--font-display); font-size:1.15rem; text-align:center; line-height:1; transform:rotate(12deg); }
+
+/* 6. MOSAIC GALLERY: 12 x 15 grid. Big photo left-top, two small top-right, wide photo bottom-right,
+   crew photo bottom-left. Box shapes match the photos, so heads and feet stay in. */
+.gallery{ position:relative; padding:0 var(--pad) calc(var(--pad) * 1.2); overflow:hidden; }
+.gallery .bg{ position:absolute; top:-.1em; left:0; right:0; text-align:center; font-family:var(--font-display); font-size:22vw; line-height:1; color:transparent; -webkit-text-stroke:2px rgba(11,31,58,.08); pointer-events:none; }
+.gallery h2{ position:relative; font-size:clamp(2.4rem, 5vw, 4rem); margin-bottom:2rem; }
+.mosaic{ position:relative; display:grid; gap:var(--gap); grid-template-columns:repeat(12,1fr); grid-template-rows:repeat(15,1fr); aspect-ratio:16 / 15; }
+.tile{ position:relative; }
+.tile::before{ content:""; position:absolute; inset:0; transform:translate(8px,8px); border:2px solid transparent; }
+.tile.red::before{ border-color:var(--color-red); }
+.tile.sky::before{ border-color:var(--color-sky); }
+.tile img{ position:relative; }
+.tile span{ position:absolute; z-index:2; left:12px; bottom:12px; padding:.3em .9em; background:var(--color-white); color:var(--color-navy); font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; border-radius:999px; }
+.g1{ grid-area:1 / 1 / 10 / 7; }
+.g5{ grid-area:10 / 1 / 16 / 7; }   .g5 img{ object-position:50% 19%; }
+.g2{ grid-area:1 / 7 / 7 / 10; }
+.g3{ grid-area:1 / 10 / 7 / 13; }   .g3 img{ object-position:60% 40%; }
+.g4{ grid-area:7 / 7 / 16 / 13; }   .g4 img{ object-position:50% 65%; }
+
+/* 7. CONTACT */
+.contact{ position:relative; overflow:hidden; background:var(--color-navy); color:var(--color-white); text-align:center; padding:calc(var(--pad) * 1.3) var(--pad); }
+.contact::before, .contact::after{ content:""; position:absolute; border-radius:50%; }
+.contact::before{ width:46vw; height:46vw; left:-14vw; top:-18vw; background:var(--color-blue); opacity:.55; }
+.contact::after{ width:30vw; height:30vw; right:-8vw; bottom:-14vw; background:var(--color-pink); opacity:.45; }
+.contact > *{ position:relative; z-index:1; }
+.contact h2{ font-size:clamp(3rem, 9vw, 7.5rem); margin-bottom:1rem; }
+.contact p{ margin-bottom:.4rem; }
+.contact .btn{ margin-top:1.6rem; }
+
+/* 8. FOOTER */
+footer{ background:var(--color-navy); color:var(--color-white); text-align:center; padding:1.4rem; font-size:.8rem; letter-spacing:.1em; border-top:1px solid rgba(255,255,255,.15); }
+
+/* MOBILE */
+@media (max-width:760px){
+  .intro{ grid-template-columns:1fr; }
+  .frame{ max-width:420px; margin:0 auto 16px; }
+  .mosaic{ aspect-ratio:auto; grid-template-columns:1fr 1fr; grid-template-rows:none; }
+  .tile{ grid-area:auto; aspect-ratio:3 / 4; }
+  .tile.g1, .tile.g4{ grid-column:1 / -1; aspect-ratio:10 / 11; }
+  .tile.g5{ grid-column:1 / -1; aspect-ratio:1 / 1; }
+  .g5 img{ object-position:50% 25%; }
+}
+
+
+/* 12. NAVIGATION BAR (same look as the other pages) */
+.nav{ position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:14px var(--pad); background:var(--color-navy); color:var(--color-white); }
+.nav .logo{ font-family:var(--font-display); font-size:1.7rem; letter-spacing:.06em; white-space:nowrap; }
+.nav ul{ display:flex; gap:clamp(12px, 2vw, 30px); list-style:none; overflow-x:auto; scrollbar-width:none; }
+.nav a{ font-size:.78rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; white-space:nowrap; padding-bottom:4px; border-bottom:2px solid transparent; }
+.nav a:hover, .nav a.on{ border-color:var(--color-pink); }
+.nav .logo{ border-bottom:0; }
+@media (max-width:860px){
+  .nav{ flex-direction:column; align-items:flex-start; gap:10px; }
+  .nav ul{ max-width:100%; }
+}
+
+
+/* 13. WATCH THE CREW (three clips on the home page) */
+.watch{ background:var(--color-blue); color:var(--color-white); text-align:center; padding:calc(var(--pad) * .9) var(--pad); }
+.watch h2{ font-size:clamp(2.6rem, 6vw, 5rem); margin-bottom:2rem; }
+.watch .reel{ display:grid; grid-template-columns:repeat(3, 1fr); gap:var(--gap); max-width:900px; margin:0 auto 2.2rem; }
+.watch figure{ border-top:6px solid var(--color-pink); background:var(--color-navy); }
+.watch figure:nth-child(2){ border-color:var(--color-sky); }
+.watch figure:nth-child(3){ border-color:var(--color-red); }
+.watch video{ display:block; width:100%; aspect-ratio:9 / 16; object-fit:cover; background:#000; }
+@media (max-width:760px){
+  .watch .reel{ grid-template-columns:repeat(3, 72%); overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:12px; }
+  .watch figure{ scroll-snap-align:center; }
+}
